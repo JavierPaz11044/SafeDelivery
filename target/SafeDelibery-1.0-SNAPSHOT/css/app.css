@@ -99,17 +99,19 @@ li {
 
 .container-message{
     font-family: "Raleway SemiBold", sans-serif;
-    font-size: 1em;
-    padding: 1em;
+    padding: 0.3em;
     height: auto;
-    color: white;
+    color: rgba(255,255,255,0);
+    background:rgba(255,255,255,0);
+    transition-property: all;
     z-index: 99;
+
 }
 .container-integrations{
     width: 60%;
     display: flex;
     justify-content: center;
-    margin-top:2% ;
+    margin-top:1em;
     z-index: 99;
 }
 
@@ -122,7 +124,9 @@ li {
     border-radius: 5px;
     font-size: 1.5em;
 }
+.container-section{
 
+}
 
 /*upload file*/
 .title-center{
@@ -133,6 +137,8 @@ li {
 
 .modal-content{
     background: #707070 !important;
+    width: auto;
+    overflow: auto;
 }
 .modal-title{
     font-family: "Raleway ExtraBold", sans-serif;
@@ -148,8 +154,12 @@ input{
     padding: 10px;
     font-family: "Raleway SemiBold",sans-serif;
 }
-.container-name{
+.container-input-name{
     display: flex;
+}
+.container-input-name div{
+    margin: 0 0.5em 0.5em 0 ;
+    width: 100%;
 }
 
 .container-name div{
@@ -158,15 +168,14 @@ input{
 }
 
 .container-email{
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
     display: flex;
     flex-direction: column;
 }
 
 .email input,
 .email div{
-    width: 90%;
+    width: 100%;
 }
 .dropzone{
     background: rgba(255,255,255,0.37) !important;
@@ -196,7 +205,7 @@ input{
 .btn-primary{
     background-color: rgba(255,255,255,0.6);
     font-family: "Raleway ExtraBold", sans-serif;
-    width: 30%;
+    width: auto;
     border: none;
 }
 /*hover*/
@@ -249,4 +258,20 @@ input:hover{
     width: 100%;height: auto;
 }
 
+.modal-dialog {
+     display: flex;
+    justify-content: center;
+}
 
+
+@keyframes animationsDv {
+    from{margin: -50px;
+        background-color: rgba(255,255,255,0)}
+    to{margin: 1em ;background-color: rgba(255,255,255,0.1)}
+
+}
+
+.chargerPageParraf{
+    animation-name: animationsDv;animation-duration: 4s;
+
+}

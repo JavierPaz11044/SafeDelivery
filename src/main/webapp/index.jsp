@@ -24,7 +24,7 @@
     <div class="over-image">
     </div>
 
-    <div class=" container-section" id="id-change">
+    <div class=" chargerPageParraf container-section" id="id-change">
         <div class="container-nav">
             <nav class="navbar navbar-expand-lg navbar-light container ">
 
@@ -67,7 +67,7 @@
 
         <div class="container-information recuadro ocultar">
             <div class="container-presentacion">
-                <div class="container-message">
+                <div class="chargerPageParraf container-message">
                     <p>
                         Unidad estratégica de Negocios se orienta a la busqueda de soluciones para el manejo de
                         mercancías
@@ -82,7 +82,7 @@
                     </button>
                 </div>
             </div>
-            <div class="container-carousel">
+            <div class=" container-carousel">
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -128,7 +128,7 @@
                         <!--{{ csrf_field() }}
                         {{method_field('POST')}}-->
                         <div class="container-form">
-                            <div class="container-name">
+                            <div class="container-input-name">
                                 <div class="container_name">
                                     <input id="nombre" type="text" name="nombre" required="required"
                                            placeholder="Nombre">
@@ -209,7 +209,7 @@
     <!--
     integracion de redes sociales
     -->
-    <a class="appWpp" target="_blank" href="https://api.whatsapp.com/send?phone=593967512206&text=Hola!&nbsp;,necesito&nbsp;ayuda!&nbsp;">
+    <a class="appWpp" target="_blank" href="https://api.whatsapp.com/send?phone=34652786280&text=Hola!&nbsp;,necesito&nbsp;ayuda!&nbsp;">
         <img src="assets/whatsapp.svg" alt="whatsapp">
     </a>
     <!-- Load Facebook SDK for JavaScript -->
@@ -267,7 +267,7 @@
         parallelUploads: 1,
         maxFiles: 1,
         acceptedFiles: "application/pdf",
-        autoProcessQueue: false
+        autoProcessQueue: false,
     });
 
 </script>

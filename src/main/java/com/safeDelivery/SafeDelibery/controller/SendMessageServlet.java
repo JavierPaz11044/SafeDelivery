@@ -50,9 +50,13 @@ public class SendMessageServlet extends HttpServlet {
             Thread sendMEssageSecondPLane = new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    sendEmail.saveFile(part, request, fileName);
+                    try {
+                        sendEmail.saveFile(part.getInputStream(), getServletContext().getRealPath(""), fileName);
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     sendEmail.execute();
-                    sendEmail.deleteFile();
                 }
             });
             sendMEssageSecondPLane.start();

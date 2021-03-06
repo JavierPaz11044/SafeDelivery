@@ -21,6 +21,7 @@ $('#submit-all').on('click', function () {
             infomations.style.position = 'fixed';
             $('#exampleModalCenter').modal('hide')
             var filePDf = myDropzone.files[0];
+            console.log(myDropzone.files);
             var formulario = new FormData();
             formulario.append("nombre", nombre);
             formulario.append("apellido", apellido);
@@ -44,7 +45,7 @@ $('#submit-all').on('click', function () {
                 processData: false,
                 success: (function () {
                     console.log("Mensaje enviado exitosamente")
-                    reset(); 
+                    reset();
                     infomations.style.position = 'static';
                     $('#exampleModal').modal('show');
                 })
@@ -66,6 +67,7 @@ function reset() {
     nombreV.style.borderColor = 'black';
     apellidoV.style.borderColor = 'black';
     input.reset();
+    myDropzone.files.shift();
     var removeElement = document.getElementsByClassName('dz-preview');
     file.removeChild(removeElement[0]);
     file.classList.remove('dz-max-files-reached');

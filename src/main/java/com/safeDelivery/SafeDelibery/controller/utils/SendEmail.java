@@ -12,20 +12,23 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import javax.mail.util.ByteArrayDataSource;
 import javax.servlet.http.*;
 import javax.servlet.http.Part;
 import java.io.*;
+import java.util.Arrays;
 import java.util.Properties;
 
 public class SendEmail {
     private Properties properties = System.getProperties();
     private String pathActual = "";
     private String nombreActual = "";
-
-    private String nombre ="";
+    private Address address[];
+    private String nombre = "";
     private String apellido = "";
     private String email = "";
-    public SendEmail( ) {
+
+    public SendEmail() {
     }
 
     public SendEmail(String nombre, String apellido, String email) {
@@ -46,15 +49,20 @@ public class SendEmail {
     }
 
     private void addAttach(Multipart multipart) {
-        File file = new File(this.pathActual+nombreActual);
-        DataSource source = new FileDataSource(file);
-        BodyPart messageBodyPart = new MimeBodyPart();
         try {
+            File file = new File(this.pathActual + nombreActual);
+            InputStream fileSend = new FileInputStream(file);
+            DataSource source = new ByteArrayDataSource(fileSend, "application/pdf");
+            BodyPart messageBodyPart = new MimeBodyPart();
             messageBodyPart.setDataHandler(new DataHandler(source));
             messageBodyPart.setFileName(file.getName());
             multipart.addBodyPart(messageBodyPart);
+            fileSend.close();
         } catch (MessagingException e) {
             System.out.println(e.getCause());
+        } catch (IOException i) {
+            i.printStackTrace();
+            System.out.println(i.getMessage());
         }
     }
 
@@ -97,14 +105,14 @@ public class SendEmail {
                 "\n" +
                 "<div class=\"titulo\" > <h1>Información Curriculum</h1></div>\n" +
                 "<hr>\n" +
-                "<div class=\".div_contenido\" >Correo de remitente:"+this.email+"</div>\n" +
+                "<div class=\".div_contenido\" >Correo de remitente: " + this.email + "</div>\n" +
                 "\n" +
-                "<div class=\".div_contenido\" >Nombres de remitente:"+this.nombre+"  ${nombre}</div>\n" +
+                "<div class=\".div_contenido\" >Nombres de remitente: " + this.nombre + " </div>\n" +
                 "\n" +
-                "<div class=\".div_contenido\" >Apellidos de remitente:"+this.apellido+"</div>\n" +
+                "<div class=\".div_contenido\" >Apellidos de remitente: " + this.apellido + "</div>\n" +
                 "\n" +
                 "\n" +
-                "<div class=\".div_contenido\" >El mensaje a sido recivido con exito <br/> Responda a <b> "+this.email+"</b> </div>\n" +
+                "<div class=\".div_contenido\" >El mensaje a sido recivido con exito <br/> Responda a <b> " + this.email + "</b> </div>\n" +
                 "\n" +
                 "</body>\n" +
                 "</html>\n";
@@ -115,51 +123,65 @@ public class SendEmail {
     /*Metodos publicos*/
     private boolean sendEmail() {
         Session session = Session.getDefaultInstance(properties);
-        MimeMessage message = new MimeMessage(session);
+        MimeMessage msg = new MimeMessage(session);
         TemplateEngine templateEngine = new TemplateEngine();
 
         try {
-            Transport transport = session.getTransport("smtp");
-            transport.connect("smtp.gmail.com", REMITENTE, CLAVE);
-            message.setFrom(new InternetAddress(REMITENTE));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(DESTINATARIO));
-            message.setSubject("Peticion de empleo");
+
+            Thread.sleep(3000);
+            msg.setFrom(new InternetAddress(REMITENTE));
+            msg.setRecipient(Message.RecipientType.TO, new InternetAddress(DESTINATARIO));
+            msg.setSubject("Peticion de empleo");
             BodyPart messageBodyPart = new MimeBodyPart();
             messageBodyPart.setText("Informacion del solicitante");
             /*Email de plantilla*/
-           /*///////////////////////// */
-            messageBodyPart.setContent(readHTML(),"text/html");
+            /*///////////////////////// */
+            messageBodyPart.setContent(readHTML(), "text/html");
             Multipart archive = new MimeMultipart();
             this.addAttach(archive);
             archive.addBodyPart(messageBodyPart);
-            message.setContent(archive);
-            transport.sendMessage(message, message.getAllRecipients());
+            msg.setContent(archive);
+            System.out.println(Arrays.toString(msg.getAllRecipients()));
+            Transport transport = session.getTransport("smtp");
+            transport.connect("smtp.gmail.com", REMITENTE, CLAVE);
+            transport.sendMessage(msg, msg.getAllRecipients());
             transport.close();
+            deleteFile();
             return true;
         } catch (MessagingException me) {
             me.printStackTrace();   //Si se produce un error
-
+            System.out.println(me.getMessage());
+            return false;
+        } catch (InterruptedException e) {
+            e.printStackTrace();
             return false;
         }
     }
 
-    public boolean saveFile(Part part, HttpServletRequest request, String fileName){
-        String applicationPath = request.getServletContext().getRealPath("");
+    public boolean saveFile(InputStream inputStream, String path, String fileName) {
+        String applicationPath = path;
         System.out.println(applicationPath);
         // constructs path of the directory to save uploaded file
-        String uploadFilePath = applicationPath + File.separator + UPLOAD_DIR;
+        String uploadFilePath = applicationPath + File.separator + UPLOAD_DIR + File.separator;
         // creates the save directory if it does not exists
-        File fileSaveDir = new File(uploadFilePath);
-        if (!fileSaveDir.exists()) {
-            fileSaveDir.mkdirs();
-        }
-        System.out.println("Upload File Directory="+fileSaveDir.getAbsolutePath());
+        // new File(uploadFilePath + fileName);
+        InputStream input = null;
+        OutputStream out = null;
         try {
-            part.write(uploadFilePath + File.separator + fileName);
-            pathActual = uploadFilePath + File.separator;
+            input = inputStream;
+            out = new FileOutputStream(new File(uploadFilePath + fileName));
+            int read = 0;
+            final byte[] bytes = new byte[1024];
+            while ((read = input.read(bytes)) != -1) {
+                out.write(bytes, 0, read);
+            }
+            pathActual = uploadFilePath;
             nombreActual = fileName;
+            out.close();
+            input.close();
             return true;
         } catch (IOException e) {
+            e.printStackTrace();
             return false;
         }
     }
