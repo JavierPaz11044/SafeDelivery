@@ -294,3 +294,10 @@ input:hover {
 #btnEstamos{
     transition-delay: 2s;
 }
+
+/*hover*/
+
+ .menu > div:hover {
+    transition-duration: 1s;
+   background: #1e80b6;
+}

@@ -27,7 +27,7 @@
     <div class="container menuAndLogo" id="id-change">
         <div class="container-logo">
             <div class="Logo">
-                <div class="imgLogo" >
+                <div class="imgLogo">
                     <img id="animLogo" src="assets/imagenPo.svg">
                 </div>
                 <div class="msmLogo" id="msmLogo">
@@ -42,12 +42,12 @@
         </div>
         <div class="container-menu">
             <div class="menu">
-                <div id="inicio">
-                    <button class="btn anima" id="btnInicio" >
+                <div class="inicio">
+                    <button class="btn anima" id="btnInicio">
                         Inicio
                     </button>
                 </div>
-                <div id="quienesSomos" data-target="#exampleModalinformations" data-toggle="modal" >
+                <div id="quienesSomos" data-target="#exampleModalinformations" data-toggle="modal">
                     <button class="btn anima" id="btnSomos">
                         ¿Quiénes somos?
                     </button>
@@ -58,7 +58,7 @@
                         Trabaja con nosotros
                     </button>
                 </div>
-                <div id="dondeEstamos" data-target ="#exampleModalLong" data-toggle="modal">
+                <div id="dondeEstamos" data-target="#exampleModalLong" data-toggle="modal">
                     <button class="btn anima" id="btnEstamos">
                         ¿Dónde estamos?
                     </button>
@@ -66,179 +66,181 @@
             </div>
         </div>
 
-</div>
+    </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <div class="title-center">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Ingresa tus datos</h5>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form id="input-data" action="/SendMessageServlet" method="POST" enctype="multipart/form-data">
-                    <!--{{ csrf_field() }}
-                    {{method_field('POST')}}-->
-                    <div class="container-form">
-                        <div class="container-input-name">
-                            <div class="container_name">
-                                <input id="nombre" type="text" name="nombre" required="required"
-                                       placeholder="Nombre">
-                                <div class="message-validations">
-                                    Por favor ingresa tus nombres.
-                                </div>
-                            </div>
-                            <div class="container_apellido">
-                                <input id="apellido" type="text" name="apellido" required="required"
-                                       placeholder="Apellido">
-                                <div class="message-validations">
-                                    Por favor ingresa tus apellidos.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="container-email">
-                            <div class="email">
-
-                                <input class="form-control email" id="email" type="email" name="email"
-                                       required="required"
-                                       placeholder="Email">
-                                <div class="message-validations">
-                                    Por favor ingresa un email.
-                                </div>
-
-                            </div>
-
-                        </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="title-center">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Ingresa tus datos</h5>
                     </div>
-                    <div
-                            class="dropzone"
-                            id="dropzoneFileUpload"></div>
-                </form>
-            </div>
-
-            <div class="modal-footer justify-content-center">
-                <button type="submit" id="submit-all" class="btn btn-primary"> Enviar</button>
-                <button type="reset" class="btn btn-primary" onclick="reset()" data-dismiss="modal">Cancelar
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document" style="width: auto !important;">
-        <div class="modal-content" style="width: auto !important;">
-            <div class="modal-header " style="width: 100% !important;">
-                <div class="title-center">
-                    <h5 class="modal-title" id="tittlePosition" style="font-size: 2em">¿Dónde estamos?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-
-            </div>
-            <div class="modal-body" style="width: auto !important;">
-
-                <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.372284324187!2d-6.1748600847192945!3d36.47272338001724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDI4JzIxLjgiTiA2wrAxMCcyMS42Ilc!5e0!3m2!1ses!2sec!4v1614526382525!5m2!1ses!2sec"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <i class="fas fa-check-circle"></i> El mensaje se ha enviado correctamente
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<div class=" bg-color" id="mostrar">
-    <div class="bg">
-        <div class="spinner-border" id="start" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-    </div>
-</div>
-
-<!-- modal informations-->
-<div class="modal fade" id="exampleModalinformations" tabindex="-1" role="dialog"
-     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content  modal-bg">
-            <div class="modal-header">
-                <div class="title-center title-info">
-                    <h5 class="modal-title" id="exampleModalLongTitleInformations"> ¿Quiénes somos?</h5>
-                </div>
-            </div>
-            <div class="modal-body">
-            </div>
-            <div class="container-informations" id="insertInfo">
-
-                <div class="informations">
-                    <h3>SAFE DELIVERY</h3>
-                    <p>
-                    En esta empresa nos dedicamos a que nuestros clientes reciban en tiempo todos sus pedidos.
-                    Nuestros clientes son muy importantes y por ello nos esforzamos cada día.
-                    Safe Delivery S.L no solo reparte paquetería, también repartimos sonrisas!!!
-                    </p>
-                </div>
-                <div class="container-carousel">
-                    <div class="over"></div>
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block w-100" src="assets/imagen3.jpeg" alt="First slide">
+                <div class="modal-body">
+                    <form id="input-data" action="/SendMessageServlet" method="POST" enctype="multipart/form-data">
+                        <!--{{ csrf_field() }}
+                        {{method_field('POST')}}-->
+                        <div class="container-form">
+                            <div class="container-input-name">
+                                <div class="container_name">
+                                    <input id="nombre" type="text" name="nombre" required="required"
+                                           placeholder="Nombre">
+                                    <div class="message-validations">
+                                        Por favor ingresa tus nombres.
+                                    </div>
+                                </div>
+                                <div class="container_apellido">
+                                    <input id="apellido" type="text" name="apellido" required="required"
+                                           placeholder="Apellido">
+                                    <div class="message-validations">
+                                        Por favor ingresa tus apellidos.
+                                    </div>
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/imagen2.jpeg" alt="Second slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/imagen1.jpeg" alt="Third slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/imagen5.jpeg" alt="Four slide">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block w-100" src="assets/imagen4.jpeg" alt="Five slide">
-                            </div>
+                            <div class="container-email">
+                                <div class="email">
 
+                                    <input class="form-control email" id="email" type="email" name="email"
+                                           required="required"
+                                           placeholder="Email">
+                                    <div class="message-validations">
+                                        Por favor ingresa un email.
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                        <div
+                                class="dropzone"
+                                id="dropzoneFileUpload"></div>
+                    </form>
+                </div>
+
+                <div class="modal-footer justify-content-center">
+                    <button type="submit" id="submit-all" class="btn btn-primary"> Enviar</button>
+                    <button type="reset" class="btn btn-primary" onclick="reset()" data-dismiss="modal">Cancelar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="width: auto !important;">
+                <div class="modal-header " style="width: 100% !important;">
+                    <div class="title-center">
+                        <h5 class="modal-title" id="tittlePosition" style="font-size: 2em">¿Dónde estamos?</h5>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="width: auto !important;">
+                    <div class="container-map">
+
+                        <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3208.372284324187!2d-6.1748600847192945!3d36.47272338001724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDI4JzIxLjgiTiA2wrAxMCcyMS42Ilc!5e0!3m2!1ses!2sec!4v1614526382525!5m2!1ses!2sec"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <i class="fas fa-check-circle"></i> El mensaje se ha enviado correctamente
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class=" bg-color" id="mostrar">
+        <div class="bg">
+            <div class="spinner-border" id="start" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal informations-->
+    <div class="modal fade" id="exampleModalinformations" tabindex="-1" role="dialog"
+         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content  modal-bg">
+                <div class="modal-header">
+                    <div class="title-center title-info">
+                        <h5 class="modal-title" id="exampleModalLongTitleInformations"> ¿Quiénes somos?</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="container-informations" id="insertInfo">
+
+                    <div class="informations">
+                        <h3>SAFE DELIVERY</h3>
+                        <p>
+                            En esta empresa nos dedicamos a que nuestros clientes reciban en tiempo todos sus pedidos.
+                            Nuestros clientes son muy importantes y por ello nos esforzamos cada día.
+                            Safe Delivery S.L no solo reparte paquetería, también repartimos sonrisas!!!
+                        </p>
+                    </div>
+                    <div class="container-carousel">
+                        <div class="over"></div>
+                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="assets/imagen3.jpeg" alt="First slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/imagen2.jpeg" alt="Second slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/imagen1.jpeg" alt="Third slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/imagen5.jpeg" alt="Four slide">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="assets/imagen4.jpeg" alt="Five slide">
+                                </div>
+
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                               data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                               data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 
 
 <!--
