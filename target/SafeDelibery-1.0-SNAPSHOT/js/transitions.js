@@ -9,6 +9,7 @@ function anim(){
         btnAnime[cont].style.color ='white';
         btnAnime[cont].style.border ='2px white solid';
     }
-
 }
+
+
 window.onload = anim();
