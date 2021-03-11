@@ -1,4 +1,13 @@
+@keyframes anim {
+    from {visibility: hidden;}
+    to {visibility: visible;}
+}
 
+
+* {
+    font-size: 12px;
+    border: none;
+}
 
 @font-face {
     font-family: 'Raleway-Black', 'Raleway ExtraBold';
@@ -6,184 +15,127 @@
 }
 
 body {
-    background: #2650a2;
-    overflow: auto;
+    background:#0a0c23;}
+
+
+/*css body**/
+.container__aux{
+overflow: auto;
 }
-.image{
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    top: 0;
+/*css logo**/
+.imgLogo{
+    width: 15em;
+    margin: 0;
+    /*Transicion*/
 }
-.image img{
-    width: 100vw;
-    height: 100vh;
-}
-.container__aux {
-    height: 100vh;
-    width: 100%;
-    z-index: 99;
-    overflow: hidden;
-}
-
-.carousel-item img {
-    height: 15em;
-    min-width: 3em;
-    border: #131313 0.6px solid ;
-    border-radius: 1em;
-}
-
-
-
-
-a {
-    font-family: "Raleway ExtraBold", sans-serif !important;
-    font-style: inherit;
-    color: white !important;
-}
-
-ul {
-    margin-right: 6em;
-
-}
-
-li {
-    margin-right: 2em;
-}
-
-.carousel-item {
-    width:40vw; 
-    background: #131313;
-    border-radius: 1em;
-}
-
-.navbar-toggler-icon {
-    background: white;
-}
-
-.over-image {
-    top: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 0;
-    width: 100%;
+.imgLogo img{
+    width: 0;
     height: 100%;
-    position: absolute;
+    transition-property: width;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+ }
+.msmLogo{
+    color: rgba(0,0,0,0);
+    text-align: center;
+    transition-property: color;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    transition-delay: 1s;
+
 }
 
-.container-nav {
-    margin-top: 1em;
-    background: rgba(0, 0, 0, 0.9);
+/* css position portada**/
+.Logo{
+    display:flex !important;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
 }
 
-
-
-
-/*/////////////////////////////////////////////////////////////////////////////////*/
-.container-carousel {
-    width: 60%;
-    align-items: center !important;
-    padding-left: 5%;
-}
- 
-.container-presentacion{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.container-information{
+.container-logo{
+    width:100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.container-message{
-    font-family: "Raleway SemiBold", sans-serif;
-    padding: 0.3em;
-    height: auto;
-    color: rgba(255,255,255,0);
-    background:rgba(255,255,255,0);
-    transition-property: all;
-    z-index: 99;
-
+.menuAndLogo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.container-integrations{
-    width: 60%;
+/*css menu*/
+.menu{
     display: flex;
     justify-content: center;
-    margin-top:1em;
-    z-index: 99;
+    align-items: center;
 }
-
-.btn-colors {
-    background: black;
-    font-family: "Raleway ExtraBold", sans-serif;
+.menu button{
+    border-color: white;
     color: white;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-radius: 5px;
-    font-size: 1.5em;
+    margin: 1em;
 }
-.container-section{
-
-}
-
 /*upload file*/
-.title-center{
+.title-center {
     width: 100%;
     display: flex !important;
     justify-content: center !important;
 }
 
-.modal-content{
+.modal-content {
     background: #707070 !important;
     width: auto;
     overflow: auto;
 }
-.modal-title{
+
+.modal-title {
     font-family: "Raleway ExtraBold", sans-serif;
     color: #131313;
 }
 
 
-input{
+input {
     background-color: white !important;
     color: black !important;
     border: white 2px solid;
     border-radius: 4px;
     padding: 10px;
-    font-family: "Raleway SemiBold",sans-serif;
+    font-family: "Raleway SemiBold", sans-serif;
 }
-.container-input-name{
+
+.container-input-name {
     display: flex;
 }
-.container-input-name div{
-    margin: 0 0.5em 0.5em 0 ;
+
+.container-input-name div {
+    margin: 0 0.5em 0.5em 0;
     width: 100%;
 }
 
-.container-name div{
+.container-name div {
     margin-right: 1em;
     margin-bottom: 0.5em;
 }
 
-.container-email{
+.container-email {
     margin-bottom: 0.5em;
     display: flex;
     flex-direction: column;
 }
 
 .email input,
-.email div{
+.email div {
     width: 100%;
 }
-.dropzone{
-    background: rgba(255,255,255,0.37) !important;
+
+.dropzone {
+    background: rgba(255, 255, 255, 0.37) !important;
     border: #131313 2px dashed !important;
     text-align: center;
 }
 
-.fas{
+.fas {
     font-size: 6em;
 }
 
@@ -195,83 +147,150 @@ input{
     padding-right: 0.7em;
 }
 
-.dz-default{
+.dz-default {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.btn-primary{
-    background-color: rgba(255,255,255,0.6);
+.btn-primary {
+    background-color: rgba(255, 255, 255, 0.6);
     font-family: "Raleway ExtraBold", sans-serif;
     width: auto;
     border: none;
 }
+
 /*hover*/
-input:hover{
-    border: #131313 2px solid ;
+input:hover {
+    border: #131313 2px solid;
 }
-.container-btn-upload:hover{
+
+.container-btn-upload:hover {
     background-color: #2650a2;
 
 }
- 
-.message-validations{
+
+.message-validations {
     display: none;
     color: red;
     font-size: 0.8em;
     background-color: #838383;
     width: 100%;
-    border-radius:0 0 4px 4px ;
+    border-radius: 0 0 4px 4px;
 }
+
 /*spinner**/
-.bg  > div{
+.bg > div {
     width: 5em;
     height: 5em;
     color: white;
 }
 
-.bg-color{
+.bg-color {
 
     width: 100%;
     position: absolute;
-    z-index: 99 ;
+    z-index: 99;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: none;
     align-items: center;
     justify-content: center;
 }
+
 .modal {
     position: fixed;
 }
 
-.appWpp{
+.appWpp {
     position: fixed;
     right: 26px;
     bottom: 100px;
     width: 60px;
     z-index: 1000;
 }
-.appWpp img{
-    width: 100%;height: auto;
+
+.appWpp img {
+    width: 100%;
+    height: auto;
 }
 
 .modal-dialog {
-     display: flex;
+    width: auto;
+    display: flex;
     justify-content: center;
 }
-
-
-@keyframes animationsDv {
-    from{margin: -50px;
-        background-color: rgba(255,255,255,0)}
-    to{margin: 1em ;background-color: rgba(255,255,255,0.1)}
-
+#exampleModalinformations > div > div{
+    padding: 2em;
 }
 
-.chargerPageParraf{
-    animation-name: animationsDv;animation-duration: 4s;
+.carousel-item > img{
+    height:45vh;
+    width:45vw;
+}
 
+.informations{
+    padding:1em;
+    position:absolute;
+    z-index:99;
+    width: 90.8%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), white);
+    font-family: "Raleway SemiBold", sans-serif;
+}
+
+#insertInfo{
+    display:flex;
+    align-items:flex-end;
+    justify-content:end;
+}
+
+
+.over{
+    background-color:rgba(0,0,0,0.7);
+    width:90.8%;
+    height:70%;
+    position:absolute;
+    z-index:40;
+}
+
+
+.informations {
+    color:black
+}
+
+
+.title-info h5{
+    font-size:2em !important;
+    color:white
+}
+
+.modal-bg{
+    background-color: rgba(10, 12, 35,0.95) !important;
+    border:3px white solid
+}
+
+/*transisition button*/
+
+#btnInicio, #btnEstamos, #btnSomos,#btnNosotros{
+    border: none;
+    color: rgba(0,0,0,0);
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+}
+
+#btnInicio{
+    transition-delay: 1.25s;
+}
+#btnSomos{
+    transition-delay: 1.50s;
+}
+
+#btnNosotros{
+    transition-delay: 1.75s;
+}
+
+#btnEstamos{
+    transition-delay: 2s;
 }

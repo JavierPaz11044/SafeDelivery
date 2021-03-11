@@ -1,629 +1,276 @@
 @media only screen and (max-width: 2000px) and (max-height: 2000px) {
-    .container-information {
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .container-logo{
+        margin-bottom: 2em;
+    }
+    .imgLogo {
+        width: 30em;
+        background: rgba(0,0,0,0);
     }
 
-    .container-message {
+    h1 {
+        font-size: 4em;
+        letter-spacing: 0.6em;
+    }
+
+    h3 {
+        font-size: 2em;
+        letter-spacing: 0.2em;
+    }
+
+    .menuAndLogo {
+        align-items: baseline;
+    }
+
+    .container-menu, .menu {
+        width: 100%;
+    }
+
+    .menu div {
+        width: 100%;
+    }
+
+    .menu button {
+        margin: 0.5em;
+        width: 90%;
+        font-size: 1.5em;
         font-family: "Raleway ExtraBold", sans-serif;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 1.3em;
-        z-index: 99;
-
-    }
-
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-integrations {
-        width: 100%;
-        z-index: 99;
-        font-size: 1.4em;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .carousel-inner img {
-        height: 65vh !important ;
-        width: 100%;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 
 }
 
 @media only screen and (max-width: 1500px) and (max-height: 700px) {
-    .container-information {
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .imgLogo {
+        width: 30em;
+        background: #720707;
+    }
+    .container-logo{
+        margin-bottom: 2em;
+    }
+    .imgLogo {
+        width: 30em;
+        background: rgba(0,0,0,0);
     }
 
-    .container-message {
+    h1 {
+        font-size: 4em;
+        letter-spacing: 0.6em;
+    }
+
+    h3 {
+        font-size: 2em;
+        letter-spacing: 0.2em;
+    }
+
+    .menuAndLogo {
+        align-items: baseline;
+    }
+
+    .container-menu, .menu {
+        width: 100%;
+    }
+
+    .menu div {
+        width: 100%;
+    }
+
+    .menu button {
+        margin: 0.5em;
+        width: 90%;
+        font-size: 1.5em;
         font-family: "Raleway ExtraBold", sans-serif;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 1em;
-        z-index: 99;
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
-
-    .container-integrations {
-        width: 100%;
-        z-index: 99;
-        font-size: 1em;
-        display: inline-block;
-        text-align: center;
-    }
-
-
-    .carousel-inner img {
-        height: 65vh !important ;
-        width: 100%;
-    }
-
 
 }
 
 
 @media only screen and (max-width: 360px) and (max-height: 700px) {
-    .container-information {
-        height: auto;
-        display: flex;
+    .imgLogo {
+        width: 30em;
+        background: rgba(0, 0, 0, 0);
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    .menuAndLogo {
+        align-items: baseline;
+    }
+
+    .menu {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        justify-content: start;
+        align-items: start;
     }
 
-    .container-message {
-        font-family: "Raleway ExtraBold", sans-serif;
-        width: 100%;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 0.7em;
-        z-index: 99;
-        padding-bottom: 0;
-    }
-
-    .container-presentacion {
+    .container-menu, .menu {
         width: 100%;
     }
 
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-integrations {
-        width: 100%;
-        top: 0;
-        z-index: 99;
-        font-size: 0.8em;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .carousel-inner img {
-        height: 40vh !important;
+    .menu div {
         width: 100%;
     }
 
-    .carousel-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-inner {
-        margin-top: 0.3em;
-    }
-
-    .carousel {
-        width: 100%;
-    }
-
-    .container-carousel {
-        width: 100%;
-        padding-right: 1em;
-    }
-
-    .container-input-name {
-        flex-direction: column;
-    }
-
-    .container-input-name >div > input{
-        width: 100%
+    .menu button {
+        margin: 0.5em;
+        width: 90%;
+        font-size: 2em;
     }
 }
 
 
-@media only screen and (max-width: 450px) and (max-height: 830px) and (min-width:400px) {
-    .container-information {
-        height: auto;
-        display: flex;
+@media only screen and (max-width: 450px) and (max-height: 830px) and (min-width: 400px) {
+    .imgLogo {
+        width: 31em;
+        background: rgba(0, 0, 0, 0);
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+    }
+
+    .menuAndLogo {
+        align-items: baseline;
+    }
+
+    .menu {
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        justify-content: start;
+        align-items: start;
     }
 
-    .container-message {
-        font-family: "Raleway ExtraBold", sans-serif;
-        width: 100%;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 1em;
-        z-index: 99;
-        padding-bottom: 0;
-    }
-
-    .container-presentacion {
+    .container-menu, .menu {
         width: 100%;
     }
 
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-integrations {
-        width: 100%;
-        top: 0;
-        z-index: 99;
-        font-size: 1em;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .carousel-inner img {
-        height: 40vh !important;
+    .menu div {
         width: 100%;
     }
 
-    .carousel-item {
-        width: 100%;
-        height: auto;
+    .menu button {
+        margin: 0.5em;
+        width: 90%;
+        font-size: 2em;
     }
 
-    .carousel-inner {
-        margin-top: 0.8em;
-    }
-
-    .carousel {
-        width: 100%;
-    }
-
-    .container-carousel {
-        width: 100%;
-        padding-right: 1em;
-    }
-
-    .container-input-name {
-        flex-direction: column;
-    }
-
-    .container-input-name >div > input{
-        width: 100%
-    }
 }
+
 @media only screen and (max-width: 330px) and (max-height: 600px) {
-    .container-information {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 
-    .container-message {
-        font-family: "Raleway ExtraBold", sans-serif;
-        width: 100%;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 0.6em;
-        z-index: 99;
-        padding-bottom: 0;
-    }
-
-    .container-presentacion {
-        width: 100%;
-    }
-
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-integrations {
-        width: 100%;
-        top: 0;
-        z-index: 99;
-        font-size: 0.6em;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .carousel-inner img {
-        height: 35vh !important;
-        width: 100%;
-    }
-
-    .carousel-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-inner {
-        margin-top: 0.8em;
-    }
-
-    .carousel {
-        width: 100%;
-    }
-
-    .container-carousel {
-        width: 100%;
-        padding-right: 1em;
-    }
-
-    .container-input-name {
-        flex-direction: column;
-    }
-
-    .container-input-name >div > input{
-        width: 100%
-    }
 }
 
 
-@media only screen and (max-width: 380px) and (max-height: 700px)and (min-width:330px)  {
-    .container-information {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .container-message {
-        font-family: "Raleway ExtraBold", sans-serif;
-        width: 100%;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 0.8em;
-        z-index: 99;
-        padding-bottom: 0;
-    }
-
-    .container-presentacion {
-        width: 100%;
-    }
-
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-integrations {
-        width: 100%;
-        top: 0;
-        z-index: 99;
-        font-size: 0.6em;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .carousel-inner img {
-        height: 40vh !important;
-        width: 100%;
-    }
-
-    .carousel-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-inner {
-        margin-top: 0.8em;
-    }
-
-    .carousel {
-        width: 100%;
-    }
-
-    .container-carousel {
-        width: 100%;
-        padding-right: 1em;
-    }
-
-    .container-input-name {
-        flex-direction: column;
-    }
-
-    .container-input-name >div > input{
-        width: 100%
+@media only screen and (max-width: 380px) and (max-height: 700px)and (min-width: 330px) {
+    .imgLogo {
+        width: 20em;
+        background: #0135ee;
     }
 }
 
-@media only screen and (max-width: 380px) and (max-height: 850px) and (min-width:330px) {
-    .container-information {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+@media only screen and (max-width: 415px) and (max-height: 740px)  {
+    .imgLogo {
+        width: 20em;
+        background: #933a17;
     }
 
-    .container-message {
-        font-family: "Raleway ExtraBold", sans-serif;
-        width: 100%;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 1em;
-        z-index: 99;
-        padding-bottom: 0;
+    h1{
+        font-size:2em;
     }
 
-    .container-presentacion {
-        width: 100%;
+    h3{
+        font-size:1em;
     }
 
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-integrations {
-        width: 100%;
-        top: 0;
-        z-index: 99;
-        font-size: 0.6em;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .carousel-inner img {
-        height: 40vh !important;
-        width: 100%;
-    }
-
-    .carousel-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-inner {
-        margin-top: 0.8em;
-    }
-
-    .carousel {
-        width: 100%;
-    }
-
-    .container-carousel {
-        width: 100%;
-        padding-right: 1em;
-    }
-
-    .container-input-name {
-        flex-direction: column;
-    }
-
-    .container-input-name >div > input{
-        width: 100%
-    }
 }
 
+@media only screen and (max-width: 415px) and (max-height: 850px)  {
 
-@media only screen and (max-width: 800px) and (max-height: 1050px)and (min-width: 760px){
-    .container-information {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .imgLogo {
+        width: 20em;
+        background: #c9b7b0;
+    }
+    h1{
+        font-size:2.3em;
     }
 
-    .container-message {
-        font-family: "Raleway ExtraBold", sans-serif;
-        width: 90%;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 1.5em;
-         z-index: 99;
-        padding-bottom: 0;
+    h3{
+        font-size:1.4em;
     }
 
-    .container-presentacion {
-        width: 100%;
-    }
-
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-integrations {
-        width: 100%;
-        top: 0;
-        z-index: 99;
-        font-size: 1.5em;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .carousel-inner img {
-        height: 40vh !important;
-        width: 100%;
-    }
-
-    .carousel-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-inner {
-        margin-top: 0.8em;
-    }
-
-    .carousel {
-        width: 100%;
-    }
-
-    .container-carousel {
-        width: 100%;
-        padding-right: 1em;
-    }
-
-    .container-input-name {
-        flex-direction: column;
-    }
-
-    .container-input-name >div > input{
-        width: 100%
-    }
-}
-
-@media only screen and (max-width: 1030px) and (max-height: 1380px) and (min-width:1010px){
-    .container-information {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .container-message {
-        font-family: "Raleway ExtraBold", sans-serif;
-        width: 90%;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 2.1em;
-        background-color: rgba(0, 0, 0, 0.2);
-        z-index: 99;
-        padding-bottom: 0;
-    }
-
-    .container-presentacion {
-        width: 100%;
-    }
-
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    .container-integrations {
-        width: 100%;
-        top: 0;
-        z-index: 99;
-        font-size: 2em;
-        display: inline-block;
-        text-align: center;
-    }
-
-    .carousel-inner img {
-        height: 40vh !important;
-        width: 100%;
-    }
-
-    .carousel-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-inner {
-        margin-top: 2em;
-    }
-
-    .carousel {
-        width: 100%;
-    }
-
-    .container-carousel {
-        width: 100%;
-        padding-right: 1em;
-    }
-
-    .container-input-name {
-        flex-direction: column;
-    }
-
-    .container-input-name >div > input{
-        width: 100%
-    }
 }
 
 
 
-@media only screen and (max-width: 550px) and (max-height: 720px) and (min-width:530px) {
-    .container-information {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+
+@media only screen and (max-width: 400px) and (max-height: 815px)  {
+
+    .imgLogo {
+        width: 20em;
+        background: #8c4d34;
+    }
+    h1{
+        font-size:2.3em;
     }
 
-    .container-message {
-        font-family: "Raleway ExtraBold", sans-serif;
-        width: 90%;
-        margin-left: 1em;
-        margin-right: 1em;
-        font-size: 1em;
-        z-index: 99;
-        padding-bottom: 0;
+    h3{
+        font-size:1.4em;
     }
 
-    .container-presentacion {
-        width: 100%;
+    .menu{
+        flex-direction:column
     }
 
-    .over-image {
-        z-index: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media only screen and (max-width: 770px) and (max-height: 1030px)  {
+
+    .imgLogo {
+        width: 20em;
+        background: #8c4d34;
+    }
+    h1{
+        font-size:2.3em;
     }
 
-    .container-integrations {
-        width: 100%;
-        top: 0;
-        z-index: 99;
-        font-size: 2em;
-        display: inline-block;
-        text-align: center;
+    h3{
+        font-size:1.4em;
     }
 
-    .carousel-inner img {
-        height: 40vh !important;
-        width: 100%;
-    }
-
-    .carousel-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-inner {
-        margin-top: 2em;
-    }
-
-    .carousel {
-        width: 100%;
-    }
-
-    .container-carousel {
-        width: 100%;
-        padding-right: 1em;
-    }
-
-    .container-input-name {
-        flex-direction: column;
-    }
-
-    .container-input-name >div > input{
-        width: 100%
+    .menu{
+        flex-direction:column
     }
 }
 
 
+@media (max-width : 1030px) and (max-height:1370px){
+
+    .modal-dialog{
+        padding-top:5em !important;
+        align-items:start;
+    }
+
+    .over{
+        height:90%;
+    }
+
+    .informations h3{
+        font-size:5em;
+    }
+    .informations p {
+        font-size:1.5em
+    }
+}

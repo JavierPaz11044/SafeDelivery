@@ -1,8 +1,15 @@
-var divMessage = document.getElementsByClassName('container-message');
-function animtedDiv(){
-    console.log(divMessage);
-    divMessage[0].style.color='rgba(255,255,255,1)';
-    divMessage[0].style.background='rgba(255,255,255,0.1)';
-
+function anim(){
+    const animLogo = document.getElementById('animLogo');
+    const msmLogo = document.getElementById('msmLogo');
+    const  btnAnime = document.getElementsByClassName('anima');
+    animLogo.style.width ='100%';
+    msmLogo.style.color ='#ce8644';
+    for (let cont = 0; cont < btnAnime.length; cont++){
+        console.log(btnAnime[cont])
+        btnAnime[cont].style.color ='white';
+        btnAnime[cont].style.border ='2px white solid';
+    }
 }
-window.onload = animtedDiv();
+
+
+window.onload = anim();
