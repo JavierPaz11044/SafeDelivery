@@ -43,7 +43,7 @@
         <div class="container-menu">
             <div class="menu">
                 <div class="inicio">
-                    <button class="btn anima" id="btnInicio">
+                    <button class="btn anima" id="btnInicio" onclick="reload()">
                         Inicio
                     </button>
                 </div>

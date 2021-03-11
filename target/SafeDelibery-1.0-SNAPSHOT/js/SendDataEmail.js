@@ -137,4 +137,6 @@ emailV.addEventListener("click", function (){
 
 
 
-
+function reload(){
+    location.reload();
+}
