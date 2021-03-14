@@ -35,7 +35,7 @@
                         SAFE DELIVERY
                     </h1>
                     <h3>
-                        COMPARTIENDO SONRISAS
+                        REPARTIENDO SONRISAS
                     </h3>
                 </div>
             </div>

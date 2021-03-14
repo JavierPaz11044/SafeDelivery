@@ -135,8 +135,6 @@ emailV.addEventListener("click", function (){
     emailV.style.borderColor = 'black'
 })
 
-
-
 function reload(){
     location.reload();
 }
