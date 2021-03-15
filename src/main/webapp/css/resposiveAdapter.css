@@ -43,7 +43,6 @@
 @media only screen and (max-width: 1500px) and (max-height: 700px) {
     .imgLogo {
         width: 30em;
-        background: #720707;
     }
     .container-logo{
         margin-bottom: 2em;
@@ -90,7 +89,6 @@
 @media only screen and (max-width: 360px) and (max-height: 700px) {
     .imgLogo {
         width: 30em;
-        background: rgba(0, 0, 0, 0);
     }
 
     h1 {
@@ -130,7 +128,6 @@
 @media only screen and (max-width: 450px) and (max-height: 830px) and (min-width: 400px) {
     .imgLogo {
         width: 31em;
-        background: rgba(0, 0, 0, 0);
     }
 
     h1 {
@@ -175,14 +172,12 @@
 @media only screen and (max-width: 380px) and (max-height: 700px)and (min-width: 330px) {
     .imgLogo {
         width: 20em;
-        background: #0135ee;
     }
 }
 
 @media only screen and (max-width: 415px) and (max-height: 740px)  {
     .imgLogo {
         width: 20em;
-        background: #933a17;
     }
 
     h1{
@@ -199,7 +194,6 @@
 
     .imgLogo {
         width: 20em;
-        background: #c9b7b0;
     }
     h1{
         font-size:2.3em;
@@ -218,7 +212,6 @@
 
     .imgLogo {
         width: 20em;
-        background: #8c4d34;
     }
     h1{
         font-size:2.3em;
@@ -240,7 +233,6 @@
 
     .imgLogo {
         width: 20em;
-        background: #8c4d34;
     }
     h1{
         font-size:2.3em;

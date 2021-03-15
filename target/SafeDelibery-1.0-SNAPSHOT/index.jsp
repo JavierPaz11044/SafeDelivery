@@ -24,11 +24,11 @@
 <body>
 
 <div class="container__aux">
-    <div class="container menuAndLogo" id="id-change">
+    <div class="container menuAndLogo" id="id-change" style="margin-top: 3em">
         <div class="container-logo">
             <div class="Logo">
                 <div class="imgLogo">
-                    <img id="animLogo" src="assets/imagenPo.svg">
+                    <img id="animLogo" src="assets/logoPortadav6.svg">
                 </div>
                 <div class="msmLogo" id="msmLogo">
                     <h1>

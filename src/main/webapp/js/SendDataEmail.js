@@ -11,8 +11,6 @@ var bgSpinner = document.getElementById('mostrar');
 var infomations = document.getElementById('id-change');
 
 $('#submit-all').on('click', function () {
-
-
     if (validate()) {
         var nombre = document.getElementById('nombre').value;
         var apellido = document.getElementById('apellido').value;
@@ -111,7 +109,6 @@ function validateEmail(email) {
     if (email == null) {
         return false
     }
-    console.log(email)
     emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
     if (emailRegex.test(email)) {
         return true
