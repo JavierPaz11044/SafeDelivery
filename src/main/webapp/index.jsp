@@ -247,8 +247,8 @@
 integracion de redes sociales
 -->
 <a class="appWpp" target="_blank"
-   href="https://api.whatsapp.com/send?phone=34652786280&text=Hola!&nbsp;,necesito&nbsp;ayuda!&nbsp;">
-    <img src="assets/whatsapp.svg" alt="whatsapp">
+   href="mailto:sfd@safedelivery.es?Subject=Información">
+    <img src="assets/gmail.svg" alt="whatsapp">
 </a>
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>

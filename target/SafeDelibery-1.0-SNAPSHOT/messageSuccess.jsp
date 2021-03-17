@@ -13,5 +13,6 @@
 <body>
 hola mundo
 hola mundo
+<a href="mailto:sfd@safedelivery.es?Subject=Respuesta%de%empleo"></a>
 </body>
 </html>

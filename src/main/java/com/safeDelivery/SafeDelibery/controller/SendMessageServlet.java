@@ -1,7 +1,6 @@
 package com.safeDelivery.SafeDelibery.controller;
 
-import com.safeDelivery.SafeDelibery.controller.utils.SendEmail;
-
+import com.safeDelivery.SafeDelibery.controller.utils.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
@@ -45,6 +44,7 @@ public class SendMessageServlet extends HttpServlet {
 
 
     public void send(String nombre, String apellido, String email, Part part , String fileName, HttpServletRequest request){
+
         SendEmail sendEmail = new SendEmail(nombre,apellido,email);
         try {
             Thread sendMEssageSecondPLane = new Thread(new Runnable() {

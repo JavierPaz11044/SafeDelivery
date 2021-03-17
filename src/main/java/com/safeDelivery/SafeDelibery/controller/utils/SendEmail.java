@@ -111,8 +111,8 @@ public class SendEmail {
                 "\n" +
                 "<div class=\".div_contenido\" >Apellidos de remitente: " + this.apellido + "</div>\n" +
                 "\n" +
-                "\n" +
-                "<div class=\".div_contenido\" >El mensaje a sido recivido con exito <br/> Responda a <b> " + this.email + "</b> </div>\n" +
+                "\n" +"" +
+                "<div class=\".div_contenido\" >El mensaje a sido recivido con exito <br/> Responda a <a href=\"mailto:"+this.email+"?Subject=Respuesta%20de%20empleo\">" + this.email + "</a>"+
                 "\n" +
                 "</body>\n" +
                 "</html>\n";
@@ -205,7 +205,7 @@ public class SendEmail {
 
     public static final String CLAVE = "gpuiqysalqvxhcjn";
     public static final String REMITENTE = "sendmessageinformation40@gmail.com";
-    public static final String DESTINATARIO = "lujapak@gmail.com";
+    public static final String DESTINATARIO = "sfd@safedelivery.es";
     public static final String PATH = "src/main/resources/";
     public static final String PATH_HTML = "src/main/resources/template/curriculum.html";
     private static final String UPLOAD_DIR = "uploads";
